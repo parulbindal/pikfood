@@ -1,0 +1,790 @@
+ <!doctype html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
+<link href="animate.css" rel="stylesheet">
+
+  <meta charset="utf-8">
+  
+  <title>PikFood</title>
+<link rel="shortcut icon" href="favicon-32x32.png" />
+<style type="text/css">
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.menu{
+    position:relative;
+    margin-top: -44px;
+    float: right;
+    font-size: 20px;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.menu-link{
+    cursor: pointer;
+    position: relative;
+    right: 200px;
+    top:-35px;
+}
+
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px !important; }
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .closebtn {
+        font-size: 40px !important;
+        top: 15px;
+        right: 35px;
+    }
+}
+.container :before , .row before{
+display: table;
+content:""; 
+}
+
+:before{
+box-sizing: border-box;
+}
+
+span img{
+    float: right;
+    margin-top: -100px;
+    margin-left: auto;
+    position: relative;
+    top: 8%;
+
+}
+
+.header{
+    margin-bottom: 20px;
+    margin-top: -300px;
+} 
+
+.logo{
+    margin-top: -200px;
+    text-align:center;
+}
+
+
+#about {
+   
+     position: relative;
+}
+
+#about:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(fresh-colorful-fruits-and-vegetables-picjumbo-com.jpg); 
+    width: 100%;
+    height: 100%;
+    opacity : 0.2;
+    z-index: -1;
+}
+
+#about h2{
+    margin-left: 35px;
+}
+.services{
+display: table;
+margin-left: 700px;
+margin-top: -180px;
+}
+
+.services .cell-section{
+overflow: hidden;
+display: table-cell;
+vertical-align: middle;
+
+}
+
+.about-wrapper{
+    padding-bottom: 40px;
+    position: relative;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px;
+
+}
+
+.about-wrapper .about-content{
+    display: table;
+}
+
+.about-wrapper .about-content > div:first-child{
+    border-right: 1px solid #cccccc;
+}
+
+.about-wrapper .about-content > div{
+    display: table-cell;
+    padding: 0 25px;
+    vertical-align: middle;
+    padding-top: 55px;
+}
+
+.about-content img{
+margin-left: 50px;  
+}
+
+img {
+    vertical-align: middle;
+    border: 0; 
+}
+
+.text-center{
+    text-align: center;
+    top: -55px ;
+    margin-top:-55px;
+    padding-top:-55px;
+}
+
+.about-wrapper h4{
+    margin-top: 0;
+    font-size: 31px;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+blockquote{
+    border:none;
+    font-size: 22px;
+    font-family:'Pathway Gothic One', sans-serif
+    padding-left: 65px;
+    padding-right: 65px;
+    position: relative;
+    margin-bottom: 0; 
+}
+
+.cell-section{
+font-family: 'Pathway Gothic One', sans-serif;
+font-size: 20px;
+padding: 20px;
+}
+
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.flipin{
+    backface-visibility: visible !important;
+    animation-name:flipInX;
+}
+
+.services-item{
+    background: #f9f9f9;
+    padding: 15px ;
+    margin: 10px 0;
+    position: relative;
+    color: #000000;
+    overflow: hidden;
+    transition:background .5s easeInOut;
+}
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+
+section{
+    display: block;
+}
+
+#how{
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px;
+}
+
+#how h2{
+    margin-left: 48px;
+}
+
+
+table{
+    background: url("PF_WEBBANNER_B -1.jpg");   
+}
+
+th, td {
+    text-align: left;
+    padding: 15px;
+}
+
+td{
+    background-color: rgba(242, 242, 242,0.8);
+}
+
+tr{
+   padding: 60px;
+}
+
+#play {
+    position: relative;
+ top:-700px; 
+  left: 780px;
+}
+
+.social{
+ margin-top: -93px;
+ margin-left: 1400px;
+}
+.social h4{
+    font-size: 20px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: normal;
+     position: relative; 
+         top: -30px;
+         left: 25px;
+}
+#register{
+       background-color: #333333;
+}
+
+#register h2{
+        font-size: 30px;
+       font-family: 'Pathway Gothic One', sans-serif;
+       color: #FFFFFF;
+       text-align: center;
+       position: relative; 
+         top: -5px;
+}
+
+
+#register span{
+    color: red;
+}
+
+label{
+    font-family: 'League Gothic', Arial, sans-serif;   
+    font-weight: normal; 
+    color: #939393;
+}
+
+.inline{
+    display: inline !important;
+    float: left;
+    margin-left: 20px;
+}
+
+#contact {
+    background-color: #333333;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+#contact p{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    display: inline-block;
+}
+
+#contact span{
+    color: #FFFFFF;
+    font-size: 30px;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+
+#contact ul li{
+  margin-left: 40px;
+  display: inline;
+}
+
+
+.copyright a{
+    color: #0D0D0D;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+
+.col-md-8 {
+    width: 66.66667%;
+}
+
+.col-lg-8 {
+    width: 66.66667%;
+}
+
+@media (min-width: 1200px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+
+.col-sm-8 {
+    width: 66.66667%;
+}
+
+</style> 
+
+<script type="text/javascript">
+    function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}   
+
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}  
+
+
+</script>
+
+
+</head>
+
+<body> 
+
+<div class="header">
+<img src="PF_WEBBANNER_B -1.jpg" width="100%">
+</div>
+<div class="logo">
+<img src="PF Logo_WP.png">
+
+
+
+    <div id="myNav" class="overlay">
+
+    <a href="javascript:void(0)"
+        class="closebtn"
+        onclick="closeNav()">&times;
+        </a>
+
+     <div class="overlay-content">
+        <a href="#topbar">Home</a>  
+        <a href="#about">About Us</a>
+        <a href="#how">How it works</a>
+        <a href="#register">Register Now</a>
+        <a href="#contact">Contact Us</a>
+        
+        </div>
+        </div>
+
+        </div>
+<div class="social">
+<a href="https://www.facebook.com/PikFoodInc/"><img src="facebook.png" id="social"></a>
+<a href="https://twitter.com/PikFood"><img src="twitter.png" id="social"></a>
+<h4>Connect</h4>
+</div>
+       <div class="menu-link">
+        <span
+        onclick="openNav()"><img src='Restaurant-50.png'><div class="menu">Explore More</div></span>
+       </div>
+
+        <div id="topbar" >
+         <img src="1280x800.jpg" >
+        <img src="play.png" id="play"> 
+        </div>
+
+
+    <div class="container top-divide bottom-divide">
+
+      <div id="about">
+
+                    <div class="about-wrapper">
+                       <h2>About PikFood</h2>
+                        <div class="about-content">
+
+                        <img src="cooking.png" alt="ABout Us">
+                            <div>
+                            <img src="7-2.jpg" alt="ABout Us">
+                            </div>
+                            <div class="text-center">
+                    <h1>We Turn Simple Yet Talented Home Cooks Into Home-Chefs</h1>
+                    <p>PikFood is food-tech company enabling anyone cooking at home become a home-chef by selling their food locally through PikFood application. With PikFood, you can cook great and earn great with almost no investment. We register you as a home-chef and support you in terms of sales, marketing, promotions, taxes etc.</p>
+
+                            <blockquote>
+                                "Thus we want our home chefs to cook great food and earn great money"
+                            </blockquote>
+                            </div>  
+                            </div>
+                            </div>
+                            <div class="services">
+                     <div class="cell-section">
+                    <h1>Cook Anytime</h1>
+                    <p>With PikFood App's ease of business, you cook whenever you have time. Feel like cooking? Just turn on the application and start cooking. You get pre-paid orders which means no wastage of time and material</p>                                           
+                    </div>
+                    <div class="cell-section">
+                    <h1>Be Your Own Boss</h1>
+                    <p>PikFood gives you a chance to be a home based entrepreneur without any investment. You get supported by us in getting pre-paid orders, marketing, your reviews, taxation, promotions and your reputation as a skilled chef</p> 
+                     </div>
+                     </div>  
+            
+       </div>                                      
+               
+    </div> 
+
+<br><br>
+        <div id="how">
+        <h2>How it Works</h2>
+     <table cellspacing="15">
+ 
+  <tr>
+    <td><h1>Be Your Own Boss</a></h1>
+        <p>Confused about what to cook? Be Your Own Boss! You Decide For Yourself! What To Cook? When To Cook? How Much To Cook? How Much To Get Paid? PikFood application gives you flexibility to choose what to cook, when to cook, how much to get paid for and how much time you want to take to cook. Be your own boss without wasting your time, money, energy and resources!All you need to do is register and get on-boarded as a PikFood homechef!</p>
+        </td>
+    <td><h1>What Do I Cook To Sell?</a></h1>
+        <p>You can cook and sell anything you are good at! Decide Your Own Menu! The Menu Is In Your Hand! It Can Be Fixed or Change Every Week! Cook Anything You Are Good At! Rajma Chawal? – People Love It! Sambhar-Vada? Oh La La! Cook and sell anything that are liked by people. People can review your dishes and be your fan resulting in high number of orders for you.</p></td>
+    <td><h1>When Do I Cook?</h1>
+       <p>When Do I Cook? Do I Have To Be Committed 24*7? Not at all! You Decide When You Can Cook! Get It Picked From Your Home! You cook when you get the order, pre-paid! With PikFood application, you can cook whenever you want. Just turn on your profile, and start cooking! It is hassle free!</p></td>
+  </tr>
+  <tr>
+    <td><h1>How Will I Be Paid?</h1>
+        <p>How and When Will I be paid? You are Paid Weekly Directly Into Your Account Track Your Payments and Account Statements The customer pays directly to PikFood and we keep crediting your money in your account. You can track your payments easily without any hassle. You cook only when you get paid. So no wastage of your time and resources!</p></td>
+    <td>
+        <h1>How Does PikFood Support?</h1>
+        <p>We know that becoming an entrepreneur is not easy. Thus, we have created an ecosystem for you to thrive as a home-chef in which we support you in the following areas. Your Marketing Handling Promotions Bringing Pre-Paid Orders Handling Payment Gateway Enabling Process Through State Of The Art Technology – iOS and Android!</p></td>
+    <td>
+       <h1>How Much To Cook?</h1>
+       <p>How Much Do I Cook? You Decide How Much You Want to Cook? We Will Give You Pre-orders Through PikFood mobile app. All Orders Are Pre-Paid No Wastage Of Your Time, Money, Energy and Resources Make money by cooking when you like irrespective of the time and date. Cook all the days or on some selected dates.</p></td>
+  </tr>
+ 
+</table>
+</div>
+<br>
+
+      <div id="register">
+
+        <img class = "inline" src="member.png"> 
+
+        <div class="inline" >
+            <h2>Register Now</h2>
+            <br>
+            <div class="nf-field-label"><label for="nf-field-12" class="">Name <span class="ninja-forms-req-symbol">*</span> </label></div>
+
+        
+            <div class="nf-field-element">
+            <input id="nf-field-12" name="nf-field-12" class="ninja-forms-field nf-element" type="text" value="">
+            </div>
+        
+            <div class="nf-after-field"><nf-section>
+    
+                 <div class="nf-input-limit"></div>
+    
+                <div class="nf-error-wrap nf-error"></div>
+                </nf-section>
+                </div>
+
+                <nf-field>
+             <div class="nf-field-container email-container  label-above desc- ">
+        
+                    <div class="nf-before-field"><nf-section>
+    
+                        </nf-section>
+                        </div> 
+
+                         </div>
+
+
+                 <div class="nf-field"><div id="nf-field-13-wrap" class="field-wrap email-wrap" data-field-id="13">
+        
+        
+        
+    <div class="nf-field-label"><label for="nf-field-13" class="">Email <span class="ninja-forms-req-symbol">*</span> </label></div>
+
+        
+        <div class="nf-field-element">
+    <input id="nf-field-13" name="nf-field-13" class="ninja-forms-field nf-element" type="email" value="">
+</div>
+        
+        
+    </div></div>
+        <div class="nf-after-field"><nf-section>
+    
+    <div class="nf-input-limit"></div>
+    
+    <div class="nf-error-wrap nf-error"></div>
+    
+    
+</nf-section></div>
+</nf-field><nf-field>
+    <div class="nf-field-container phone-container  label-above ">
+        <div class="nf-before-field"><nf-section>
+    
+</nf-section></div>
+        <div class="nf-field"><div id="nf-field-18-wrap" class="field-wrap phone-wrap" data-field-id="18">
+        
+        
+        
+    <div class="nf-field-label"><label for="nf-field-18" class="">Phone Number <span class="ninja-forms-req-symbol">*</span> </label></div>
+
+        
+        <div class="nf-field-element">
+    <input id="nf-field-18" name="nf-field-18" class="ninja-forms-field nf-element" type="tel" value="">
+</div>
+        
+        
+    </div></div>
+        <div class="nf-after-field"><nf-section>
+    
+    <div class="nf-input-limit"></div>
+    
+    <div class="nf-error-wrap nf-error"></div>
+    
+    
+</nf-section></div>
+    </div>
+</nf-field><nf-field>
+    <div class="nf-field-container city-container  label-above ">
+        <div class="nf-before-field"><nf-section>
+    
+</nf-section></div>
+        <div class="nf-field"><div id="nf-field-21-wrap" class="field-wrap city-wrap" data-field-id="21">
+        
+        
+        
+    <div class="nf-field-label"><label for="nf-field-21" class="">City <span class="ninja-forms-req-symbol">*</span> </label></div>
+
+        
+        <div class="nf-field-element">
+    <input id="nf-field-21" name="nf-field-21" class="ninja-forms-field nf-element" type="text" value="">
+</div>
+        
+        
+    </div>
+        <div class="nf-after-field"><nf-section>
+    
+    <div class="nf-input-limit"></div>
+    
+    <div class="nf-error-wrap nf-error"></div>
+    
+    
+</nf-section></div>
+    </div></div>
+</nf-field><nf-field>
+    <div class="nf-field-container address-container  label-above ">
+        <div class="nf-before-field"><nf-section>
+    
+</nf-section></div>
+        <div class="nf-field"><div id="nf-field-22-wrap" class="field-wrap address-wrap" data-field-id="22">
+        
+        
+        
+    <div class="nf-field-label"><label for="nf-field-22" class="">Place (e.g. Laxmi Nagar, Uttam Nagar) <span class="ninja-forms-req-symbol">*</span> </label></div>
+
+        
+        <div class="nf-field-element">
+    <input id="nf-field-22" name="nf-field-22" class="ninja-forms-field nf-element" type="text" value="">
+</div>
+        
+        
+    </div></div>
+        <div class="nf-after-field"><nf-section>
+    
+    <div class="nf-input-limit"></div>
+    
+    <div class="nf-error-wrap nf-error"></div>
+    
+    
+</nf-section></div>
+    </div>
+</nf-field><nf-field>
+    <div class="nf-field-container date-container  label-above ">
+        <div class="nf-before-field"><nf-section>
+    
+</nf-section></div>
+        <div class="nf-field"><div id="nf-field-19-wrap" class="field-wrap date-wrap" data-field-id="19">
+        
+        
+        
+    <div class="nf-field-label"><label for="nf-field-19" class="">Which Date Can We Get In Touch With You <span class="ninja-forms-req-symbol">*</span> </label></div>
+
+        
+        <div class="nf-field-element">
+    <div class="pikaday__container"><input id="nf-field-19" name="nf-field-19" class="ninja-forms-field nf-element datepicker" type="hidden" value="2016-07-04"><input type="text" class="pikaday__display pikaday__display--pikaday ninja-forms-field nf-element datepicker" placeholder=""></div>
+</div>
+        
+        
+    </div></div>
+        <div class="nf-after-field"><nf-section>
+    
+    <div class="nf-input-limit"></div>
+    
+    <div class="nf-error-wrap nf-error"></div>
+    
+    
+</nf-section></div>
+    </div>
+</nf-field><nf-field>
+    <div class="nf-field-container listselect-container  label-above ">
+        <div class="nf-before-field"><nf-section>
+    
+</nf-section></div>
+        <div class="nf-field"><div id="nf-field-20-wrap" class="field-wrap listselect-wrap list-select-wrap" data-field-id="20">
+        
+        
+        
+    <div class="nf-field-label"><label for="nf-field-20" class="">Best Time To Call You <span class="ninja-forms-req-symbol">*</span> </label></div>
+
+        
+        <div class="nf-field-element">
+
+    <select id="nf-field-20" name="nf-field-20" class="ninja-forms-field nf-element">
+        
+    <option value="10-am-11-am">10 am - 11 am</option>
+
+    <option value="11-am-12-pm">11 am - 12 pm</option>
+
+    <option value="12-pm-1-pm">12 pm - 1 pm</option>
+
+    <option value="1-pm-2-pm">1 pm - 2 pm</option>
+
+    <option value="2-pm-3-pm">2 pm - 3 pm</option>
+
+    <option value="3-pm-4-pm">3 pm - 4 pm</option>
+
+    <option value="4-pm-5-pm">4 pm - 5 pm</option>
+
+    <option value="5-pm-6-pm">5 pm - 6 pm</option>
+
+    <option value="6-pm-7-pm">6 pm - 7 pm</option>
+
+    <option value="7-pm-8-pm">7 pm - 8 pm</option>
+
+    </select>
+    <div for="nf-field-20"></div>
+</div>
+        
+        
+    </div></div>
+        <div class="nf-after-field"><nf-section>
+    
+    <div class="nf-input-limit"></div>
+    
+    <div class="nf-error-wrap nf-error"></div>
+    
+    
+</nf-section></div>
+    </div>
+</nf-field><nf-field>
+    <div class="nf-field-container submit-container  label-above ">
+        <div class="nf-before-field"><nf-section>
+    
+</nf-section></div></div>
+        <div class="nf-field"><div id="nf-field-15-wrap" class="field-wrap submit-wrap" data-field-id="15">
+        <div class="nf-field-label"></div>
+        <div class="nf-field-element">
+        <input id="nf-field-15" class="ninja-forms-field nf-element " type="button" value="Submit">
+</div>
+        <div class="nf-error-wrap"></div>
+    </div></div>
+        <div class="nf-after-field"><nf-section>
+    
+    <div class="nf-input-limit"></div>
+    
+    <div class="nf-error-wrap nf-error"></div>
+    
+    
+</nf-section></div>
+    
+
+</nf-field></nf-fields-wrap>
+        <div class="nf-after-fields"><nf-section></nf-section>
+    
+    <div class="nf-form-errors"><nf-errors></nf-errors></div>
+    <div class="nf-form-hp"><nf-section></nf-section></div>
+
+    </div>
+        <div class="nf-after-form"><nf-section></nf-section>
+
+</div></div>
+
+
+         <img class = "inline"src="member2.png">
+</div>
+
+
+    <div id="contact" >
+      <ul style="list-style-type:none">
+                            <li>
+                                <p>Call Us</p>
+                                <span>+918826757475</span>
+                            </li>
+
+                            <li>
+                                <p>Write To Us</p>
+                                <span>info@pikfood.com</span>
+                            </li>
+                           
+                        </ul>  
+       
+      </div>
+      
+      <div class="copyright">
+    <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                    <a href="http://www.pikfood.com/#" target="_blank">Copyright @ 2016 | PikFood</a>                </div>
+    </div>
+</div>
+
+
+           <br><br><br><br><br><br> 
+
+ 
+
+</body>
+</html>
